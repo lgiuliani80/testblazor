@@ -1,0 +1,16 @@
+﻿@page "/counter"
+@using TestMauiBlazor.Data;
+@inject MyModel model
+
+<h1>Counter</h1>
+
+<p role="status">Current count: @model.Counter</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+@code {
+    private void IncrementCount()
+    {
+        model.Counter++;
+    }
+}
